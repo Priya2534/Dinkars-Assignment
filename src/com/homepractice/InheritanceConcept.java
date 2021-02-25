@@ -4,28 +4,31 @@ public class InheritanceConcept {
 
 	public static void main(String[] args) {
 		C c = new C();
-		c.s="Priya";  
+		c.s = "Priya";
 		P p = new P();
 		p.add();
 		// p.sub(); cannot access child method by using parent ref
 		P p1 = new C();
-		p1.a= 10;
-		
+		p1.a = 10;
+
 	}
 
 }
+
 // Parent class
-class P{
+class P {
 	int a;
 	String s;
+
 	public void add() {
 		System.out.println("Add method ");
 	}
 }
+
 // Child class
-class C extends P{
-   public void sub() {
-	System.out.println("Sub");
-}
+class C extends P {
+	public void sub() {
+		System.out.println("Sub");
+	}
 
 }
